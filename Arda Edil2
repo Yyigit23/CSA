@@ -8,5 +8,5 @@ public class Arda Edil2 {
       String country='Turkey';
       int age= 2023-1453 ;
       System.out.print('My name is ' + name + surname + 'I work in'+ school +'which is located in' + location + city + country+ 'I am' + age + 'years old')
-  )
-)
+  }
+}
