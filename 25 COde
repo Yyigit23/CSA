@@ -1,0 +1,25 @@
+import java.util.Scanner; //input almak için importladım
+import java.util.Random;     //rastgele sayı almak için importladım
+public class Deneme {                 
+    public static void main(String[] args){
+      Scanner scanner= new Scanner(System.in);    //scanner tanımladım
+      Random random = new Random(); // random almak için tanımladım
+      String a = scanner.nextLine();  
+      System.out.println("Adınız ve soyadıız nedir"); //İsim soy isim soruyo.
+      String b = scanner.nextLine();
+      System.out.println("Mesleğiniz ne");//meslek soruyom
+      String c= scanner.nextLine();
+      System.out.println("Memleket nere"); // memleket soruyom
+      String d= scanner.nextLine();
+      System.out.println("Nerede yaşion");//Yaşam alanı soruyo
+      int e= scanner.nextInt();
+      System.out.println("Yaş kaç"); //Yaş sordum
+      while (e<0) {
+        System.out.println("Düzgün yaş gir"); //Yaş sıfırdan az ise düzgün yaş girsin
+        e=scanner.nextInt();
+    
+      }
+      System.out.println("Merhaba ," + a + " demek bir " + b + "siniz. ve memleketin " + c + " ve " + d + " da yaşion ve yaşın "+ e);
+
+    }
+}
