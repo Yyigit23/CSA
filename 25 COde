@@ -1,25 +1,25 @@
 import java.util.Scanner; //input almak için importladım
-import java.util.Random;     //rastgele sayı almak için importladım
-public class Deneme {                 
-    public static void main(String[] args){
-      Scanner scanner= new Scanner(System.in);    //scanner tanımladım
-      Random random = new Random(); // random almak için tanımladım
-      String a = scanner.nextLine();  
-      System.out.println("Adınız ve soyadıız nedir"); //İsim soy isim soruyo.
-      String b = scanner.nextLine();
-      System.out.println("Mesleğiniz ne");//meslek soruyom
-      String c= scanner.nextLine();
-      System.out.println("Memleket nere"); // memleket soruyom
-      String d= scanner.nextLine();
-      System.out.println("Nerede yaşion");//Yaşam alanı soruyo
-      int e= scanner.nextInt();
-      System.out.println("Yaş kaç"); //Yaş sordum
-      while (e<0) {
-        System.out.println("Düzgün yaş gir"); //Yaş sıfırdan az ise düzgün yaş girsin
-        e=scanner.nextInt();
-    
-      }
-      System.out.println("Merhaba ," + a + " demek bir " + b + "siniz. ve memleketin " + c + " ve " + d + " da yaşion ve yaşın "+ e);
 
+public class Matematik {                 
+    public static void main(String[] args){
+      Scanner scanner = new Scanner(System.in); //Scanner Tanımladım
+      System.out.println("Sayı gir");   //Sayı istedim
+      double a = scanner.nextDouble(); 
+      System.out.println("İşlemler faktoriyel sin cos log"); //İşlemleri Tanıttım
+      String x="sin";  // işlemleri variable olarak tanımladım altta daha kısa yazmak için
+      String y="cos";
+      String z="faktoriyel";
+      String q="log";
+     
+      System.out.println("Sayının "+ x +  "i derece olarak :" + Math.sin(Math.PI*a/180)); // Sinüsü hesapladım ama önce dereceyi radyana çevirdim
+      System.out.println("Sayının "+ y +  "i derece olarak :" + Math.cos(Math.PI*a/180));// yukarıdakinin cos varyantı
+    
+      System.out.println("Sayının " + q +  "su:" + Math.log(a)/Math.log(10)); //Sayının logunu aldım, log 10 tabanında olduğundan lnxi ln10a böldüm
+    
+      int d =1;   // Bu loopu dyi bir alarak her seferinde sayı bir artarak d ile çarptırdım aya kadar bölelikle faktriyel aldım
+      for (int i = 1; i<=a; i++){
+         d=d*(i+1); 
+      }
+      System.out.println("Sayının " +z + "i:" +d);
     }
-}
+)
