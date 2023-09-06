@@ -1,25 +1,35 @@
 import java.util.Scanner; //input almak için importladım
 
-public class Matematik {                 
+public class Main {                 
     public static void main(String[] args){
       Scanner scanner = new Scanner(System.in); //Scanner Tanımladım
       System.out.println("Sayı gir");   //Sayı istedim
       double a = scanner.nextDouble(); 
-      System.out.println("İşlemler faktoriyel sin cos log"); //İşlemleri Tanıttım
+      System.out.println("İşlem için sayıyı tuşla faktoriyel(1) sin(2) cos(3) log(4)"); //İşlemleri Tanıttım
+      int b = scanner.nextInt(); //bir işlem seçtirdim
       String x="sin";  // işlemleri variable olarak tanımladım altta daha kısa yazmak için
       String y="cos";
       String z="faktoriyel";
       String q="log";
-     
-      System.out.println("Sayının "+ x +  "i derece olarak :" + Math.sin(Math.PI*a/180)); // Sinüsü hesapladım ama önce dereceyi radyana çevirdim
-      System.out.println("Sayının "+ y +  "i derece olarak :" + Math.cos(Math.PI*a/180));// yukarıdakinin cos varyantı
-    
-      System.out.println("Sayının " + q +  "su:" + Math.log(a)/Math.log(10)); //Sayının logunu aldım, log 10 tabanında olduğundan lnxi ln10a böldüm
-    
-      int d =1;   // Bu loopu dyi bir alarak her seferinde sayı bir artarak d ile çarptırdım aya kadar bölelikle faktriyel aldım
-      for (int i = 1; i<=a; i++){
-         d=d*(i+1); 
+     //İşlemleri karşılaştırarak doğru işlemi seçip kullandım
+      if (b==2) {
+          System.out.println("Sayının "+ x +  "i derece olarak :" + Math.sin(Math.PI*a/180)); // Sinüsü hesapladım ama önce dereceyi radyana çevirdim
       }
-      System.out.println("Sayının " +z + "i:" +d);
+      if (b==3) {
+         System.out.println("Sayının "+ y +  "i derece olarak :" + Math.cos(Math.PI*a/180));// yukarıdakinin cos varyantı
+
+      }
+      if (b==4) {
+        System.out.println("Sayının " + q +  "su:" + Math.log(a)/Math.log(10)); //Sayının logunu aldım, log 10 tabanında olduğundan lnxi ln10a böldüm
+      }
+      if (b==1) {
+        int d =1;   // Bu loopu dyi bir alarak her seferinde sayı bir artarak d ile çarptırdım aya kadar bölelikle faktriyel aldım
+        for (int i = 1; i<=a; i++){
+           d=d*(i+1); 
+         }
+         System.out.println("Sayının " +z + "i:" +d);
+      }
+
+      
     }
-)
+}
