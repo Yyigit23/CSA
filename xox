@@ -1,0 +1,108 @@
+import random # random kullanmak için
+import numpy as np # arrayleri al alta yazabilmek için
+a= [1 , 2 ,3, 4, 5, 6, 7, 8, 9 ]   # pozisyonlar için, 
+Sahaorj= np.array([["B", "B","B"], ["B", "B","B"],["B", "B","B"]])# boş alan
+Saha=b = np.flip(Sahaorj,0)#2d yaptım
+c= True #loop için
+d=len(a) #uzunluğunu aldım arrayin, loopta kullancam
+s= [] #x için boş küme
+o=[] #o için boş küme
+l=len(a)
+q=random.randint(0,1)  #kim başlicak onu şeçio
+
+while c== True :
+  if q==1: # biz başlioz
+    y=int(input("yAZ"))  # input aliom
+    while (y==5 or y==1 or y==3 or y==7 or y==9) and d==9: #köşeler ve ortaya kondurmuyo
+      t=int(input("tekrar"))
+      y=t
+    s.append(y)# şeçileni xe ekle adan removela
+    a.remove(y)
+    print(s)
+    if y%3==0:#pozisyon için verilen inputu seçilen pozisyona koyuyo
+      Saha[y//3-1][2]="X" #3e bçlünüyosa en sola ve o sütüna
+    else: #diğer türlü üçe bölümünden kalana yolluyo
+      t=(y-1)%3
+      Saha [y//3][t]="X"
+    print (Saha)#sahayı printle
+  if q==0:
+    e=random.randint(0,d-1)#rastgele sayı al ve verilen koşulları uygulayana kadar kullan
+    if d==9:
+      while a[e]==5 or a[e]==1 or a[e]==3 or a[e]==7 or a[e]==9 :
+        e=random.randint(0,d-1)
+    o.append(a[e])
+    
+    print(o)
+    if a[e]%3==0:
+       Saha[(a[e]//3-1)][2]="O"
+    else: 
+      u=(a[e]-1)%3
+      Saha [a[e]//3][u]="o"
+    print (Saha)
+    a.remove(a[e])
+    
+    
+  if q==0: #sırayı değiştir
+    q=1
+  else:
+    q=0
+  d=len(a)
+  if (set([1, 2, 3]).issubset(set(s))):
+    c=False
+    print("s KAZANDI")
+  if (set([1, 2, 3]).issubset(set(o))):
+    c=False
+    print("o KAZANDI")
+  if (set([4, 5, 6]).issubset(set(s))):
+    c=False
+    print("s KAZANDI")
+  if (set([4, 5, 6]).issubset(set(o))):
+    c=False
+    print("o KAZANDI")
+  if (set([8, 7, 9]).issubset(set(s))):
+    c=False
+    print("s KAZANDI")
+  if (set([8, 7, 9]).issubset(set(o))):
+    c=False
+    print("o KAZANDI")
+  if (set([1, 4, 7]).issubset(set(s))):
+    c=False
+    print("s KAZANDI")
+  if (set([1, 4, 7]).issubset(set(o))):
+    c=False
+    print("o KAZANDI")
+  if (set([2, 8, 5]).issubset(set(s))):
+    c=False
+    print("s KAZANDI")
+  if (set([2, 5, 8]).issubset(set(o))):
+    c=False
+    print("o KAZANDI")
+  if (set([3, 6, 9]).issubset(set(s))):
+    c=False
+    print("s KAZANDI")
+  if (set([3, 6, 9]).issubset(set(o))):
+    c=False
+    print("o KAZANDI")
+  if (set([1, 5, 9]).issubset(set(s))):
+    c=False
+    print("s KAZANDI")
+  if (set([1, 5, 9]).issubset(set(o))):
+    c=False
+    print("o KAZANDI")
+  if (set([3, 5, 7]).issubset(set(s))):
+    c=False
+    print("s KAZANDI")
+  if (set([3, 5, 7]).issubset(set(o))):
+    c=False
+    print("o KAZANDI")
+  if len(a)==0:
+    print("berabere")
+    c==False
+    
+
+  
+    
+    
+    
+    
+
