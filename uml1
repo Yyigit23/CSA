@@ -1,0 +1,35 @@
+
+class Dog{
+    public String name;
+    public String breed;
+    public int age;
+    public Dog(String a, String b, int c) {
+        name=a;
+        breed=b;
+        age=c;
+    }
+    public String getName(){
+        return name;
+    }
+    public String getBreed(){
+        return breed;
+    }
+    public int getAge(){
+        return age;
+    }
+    public String toString(){
+        return "dog's name is " + name+ " and it is a "+ breed + " and it is " +age +" years old";
+    }
+    public void setName(String a){
+        name=a;
+    }
+    public void setBreed(String a){
+        breed=a;
+    }
+    public void setAge(int a){
+        age=a;
+    }
+
+
+
+}
