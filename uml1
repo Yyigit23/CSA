@@ -33,3 +33,11 @@ class Dog{
 
 
 }
+
+public class uml {
+    public static void main(String [] args) {
+        Dog mahmut= new Dog("Mahmut", "kangal" , 32);
+        System.out.println(mahmut);
+    }
+    
+}
