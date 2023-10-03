@@ -1,0 +1,50 @@
+import java.util.Scanner;  //input almak için
+public class MyClass {
+    public static void main(String args[]) {
+      Scanner scan=new Scanner(System.in);
+      int x=scan.nextInt();  // range istio
+      
+      System.out.println("range?");  
+      System.out.println(" range is "+ x);
+      System.out.println("1.?");
+      //sayıları istiem
+      
+      int y=scan.nextInt();
+      System.out.println(" first "+ y);
+
+      System.out.println("2.?");
+      
+      int z=scan.nextInt();
+      System.out.println(" 2nd is "+ z);
+
+      System.out.println("3.?");
+      
+
+      int a=scan.nextInt();
+      System.out.println(" third is "+ a);
+      System.out.println("4.?");
+      int b=scan.nextInt();
+      System.out.println(" fourth is "+ b);
+
+      int s=0;
+      int n=0;
+
+      for (int i=1; i<x; i++){// loop giriom
+          
+         
+          if (((i%y)==0)|| ((i%z)==0)){
+              s=s+i;// yye bölünüyorsa ekle summa
+          }
+          
+      }
+      for (int i=1; i<x; i++){
+           if (((i%a)==0)|| ((i%b)==0)){
+              n=n+i;// yye bölünüyorsa ekle summa
+          }
+         
+      }
+      System.out.println("sum of multiples of first and second is " + s);//printle
+      System.out.println("sum of multiples of Third and fourth is " + n);//printle
+      System.out.println("Difference is "+ Math.abs(s-n));//farkı al. mutlak değerde
+    }
+}
