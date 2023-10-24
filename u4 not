@@ -4,3 +4,25 @@ while loopda istenen durum paranteze al
 for loopda mantık (int i=a ; q<i<e; i++) gibi
 
 looplar pre apdeki mantıkta devam ediyor kalan şeyler.
+
+while loop statementın doğruluğuna bakarken for loop yapılmak istenen iş sayısı kadar çalışır.
+
+örnek kod:
+int c= 2;
+while (c<4){
+   System.out.println(c+1);
+   c=c+1;
+}
+for (int i=2, i<4, i++){
+   System.out.println(i+1);
+}
+bu iki ko da aynı şeyi yapar fakat while da kaç kere yapacağını bilmezken başta, forda bilio
+
+for (int i=1; i<5; i++){
+   int c=1;
+   
+   for (int a=1; a<=i; i++) {
+      c=c*i;
+   )
+   System.out.println(c);
+//bu kod 4e kadarki tüm faktoriyelleri yazar.
