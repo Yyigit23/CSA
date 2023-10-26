@@ -1,4 +1,4 @@
-public class car{             // void metodlarda parametreli ve parametresiz karışık
+public class car{             // void metodlarda parametreli ve parametresiz ve nonvoid method karışık karışık
     String name;
     int mile;
     String model;
@@ -13,6 +13,9 @@ public class car{             // void metodlarda parametreli ve parametresiz kar
     public void changemile(int a){
          mile=a;
     }
+    public String getname(){
+        return name;
+    }
    
     
     public static void main(String args[]) {
@@ -21,6 +24,7 @@ public class car{             // void metodlarda parametreli ve parametresiz kar
         sedat.display();
         sedat.changemile(300);
         sedat.display();
+        System.out.println(sedat.getname());
     
     }
 }
