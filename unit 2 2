@@ -1,0 +1,21 @@
+public class car{
+    String name;
+    int mile;
+    String model;
+    public car(String a, String b, int c){
+        name=a;
+        mile=c;
+        model=b;
+    }
+    public void display(){
+        System.out.println("Your car is " + name +" "+ model + " and it is used at " + mile);
+    }
+   
+    
+    public static void main(String args[]) {
+        car sedat=new car("Tofaş", "Şahin", 50);
+
+        sedat.display();
+    
+    }
+}
