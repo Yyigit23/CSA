@@ -1,4 +1,4 @@
-public class car{
+public class car{             // void metodlarda parametreli ve parametresiz karışık
     String name;
     int mile;
     String model;
@@ -10,11 +10,16 @@ public class car{
     public void display(){
         System.out.println("Your car is " + name +" "+ model + " and it is used at " + mile);
     }
+    public void changemile(int a){
+         mile=a;
+    }
    
     
     public static void main(String args[]) {
         car sedat=new car("Tofaş", "Şahin", 50);
 
+        sedat.display();
+        sedat.changemile(300);
         sedat.display();
     
     }
