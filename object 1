@@ -1,5 +1,5 @@
 //1, 2 karışık
-import javva.util.Scanner
+import java.util.Scanner
 public class Sedat {
     String name;
     int age;
