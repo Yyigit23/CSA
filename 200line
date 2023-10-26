@@ -1,0 +1,204 @@
+import java.util.Scanner; 
+
+import java.util.Random;
+
+
+//programda kullanmak için random ve input alma şeyini yükledim
+
+public class MyClass {
+    
+    String name;
+    
+    int order;
+    
+    int order2;
+    
+    
+    // gerekenleri tanımladım
+    public MyClass(int a, String b, int p){
+        
+        name=b;
+        
+        order=a;
+        
+        order2=p;
+    }
+    
+    //constructor
+    
+    public void changeorder(int x){
+        
+        order=x;
+    }
+    
+    //void methodları yazdım bunlar değer değiştirio
+    public void changename(String x){
+    
+        name=x;
+    }
+    
+    public int facotrialoforder(){ //faktoriyelin mantığı
+        
+        int c=1;
+        
+        for (int i=1; i<=order; i++){
+            
+            c=c*i;
+        }
+        
+        return c;
+    }
+    
+    //buralarda robot testi için işlemler tanımladım, math classda bulunabilecek orderları kendim yazdım
+    
+    public int ordersorderthpower(){
+    
+      int c=1;
+       
+       for (int i=0; i<order2; i++){
+           
+           c=c*order;
+       }
+       
+       return c;
+    }
+    
+    public int getOrder1(){
+        
+        return order;
+    }
+    
+    
+    // bu kısım da yine nonvoid methodu get diyerek direkt valueyi vermesi için yazdım
+    public String getname(){
+        
+        return name;
+    }
+    
+    public String toString(){
+        
+        //burası da herşeyi yazı haline düzenlediğim yer
+        
+        return("your orders are " + order+" " + order2 + " and your name must be " + name);
+    }
+    
+    
+    public static void main(String args[]) {
+        
+        
+    // main metodu aldım
+        
+      Scanner scan=new Scanner(System.in);
+      
+      Random rand=new Random();
+      
+      System.out.println("order 1iniz kaç");
+      
+      int x= scan.nextInt();
+      
+      
+      //obje oluşturmak için gereken bilgileri topladım.
+      
+     
+      
+      
+     System.out.println("order2iniz kaç");
+     
+     int y=scan.nextInt();
+     
+     System.out.println(" isminiz nedir");
+     
+     String z= scan.nextLine();
+     
+     MyClass ord= new MyClass(x, z, y);
+     
+     
+     //objeyi oluşturdum
+     
+     
+     System.out.println("order1in faktoriyelini girin böylelikle robot olmadığınızı anlayalım");
+     
+     //recatcpa gibi sorular sordum.
+     
+     
+     int u= scan.nextInt();
+     
+     int t= ord.facotrialoforder();
+     
+     if(t==u){      // cevap doğruysa robot değilmişsiniz diyor;
+        
+        System.out.println("robot değilmişsiniz");
+     }
+     
+     else{
+         System.out.println("You are a robot");
+     }
+     
+     
+     System.out.println("Bir testimiz daha olacak");
+     
+     //extra soro soruyo sonra aynı şeyi tekrar yapıyo
+     
+     System.out.println("order 1 üzeri order2yi girin");
+     
+     int s= scan.nextInt();
+     
+     if( s== (ord.ordersorderthpower())){
+         
+         System.out.println("tüm testleri geçtiniz");
+     }
+     
+     else{
+         System.out.println("you are a robot");
+     }
+     
+     System.out.println("olamaz bir sorun çıktı");,
+     
+     // sistemde sorun oluyo order1 rastgele bi sayıya dönüyo
+     
+     int q= rand.nextInt(123);
+     
+     ord.changeorder(q);
+     
+     System.out.println(" is your order's no was " + ord.getOrder1());
+     
+     System.out.println("güvenlik için lütfen isminizi tersten giriniz");
+     
+     String n= scan.nextLine();
+     
+     String m="";
+     
+     //ismi tersten girmesini istiyor sonra da bunu checklyiyor.
+     
+     String ü= ord.getname();
+     
+     for (int i=0; i<(ü.length());i++){
+         
+         m += ü.substring((ü.length()-i-1));
+     }
+     
+     
+     // en sonunda checkleyip ord.toStringi çalıştırıyor.
+     if (m.equals(n)){
+         
+         System.out.println ("doğrulandınız");
+         
+         System.out.println(ord.toString);
+         
+     }
+     
+     else{
+         
+         System.out.println("robot detected");
+     }
+     
+     
+     
+     
+     
+    
+      
+      
+        
+    }
+}
