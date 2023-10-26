@@ -1,3 +1,4 @@
+//1, 2 karışık
 import javva.util.Scanner
 public class Sedat {
     String name;
