@@ -1,0 +1,17 @@
+public class CSA{         //Stringler ve motodlar beraber olarak bir string diğerninin içinde kaç defa var onu bulan uygulama
+    
+    public static void main(String args[]) {
+        String cs="CSA alınması tavsiye edilmez ve almayın";
+        String a="al";
+        int x= cs.indexOf(a);
+        int count=0;
+        while x >=0{
+           count = count + 1;
+           cs=cs.substring((x+a.length());
+           x=cs.indexOf(a);
+          
+
+        System.out.println(count)
+    
+    }
+}
