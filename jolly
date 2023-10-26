@@ -1,0 +1,40 @@
+import java.util.Scanner;  //scanner ekle
+public class jolly {
+    public static void main(String args[]) {
+      Scanner scan=new Scanner(System.in);
+      int b=scan.nextInt();  //sayıları input al ve her birine array oluştur
+      int[] a=new int[b];
+      
+      System.out.println("Kaç sayı gircen");
+      for(int i=0; i<b; i++){
+          int x=scan.nextInt();
+          a[i]=x;
+          
+      }
+      int [] q=new int[b];
+      for (int i=1;i<b; i++){ //1den n-1e kadarkilerden array yap
+          q[i]=i;
+          
+      }
+      int count=0;
+     
+      
+      for (int i=0; i<(b-1); i++){                      
+          for (int w=0; w<(b-1); w++) //kontrol et hepsi var mı?
+              if(Math.abs(a[i+1]-a[i])==q[w]){
+                  count=count+1;
+              }
+              
+          }
+      if(count==b-1){
+          System.out.println("Jolly");
+          
+      }
+      else{
+          System.out.println("not");
+      }
+          
+      }
+      
+        
+    }
