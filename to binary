@@ -1,0 +1,28 @@
+import java.util.Scanner; 
+public class binary {
+    public static void main(String args[]) {
+      Scanner scan=new Scanner(System.in);
+      int a= scan.nextInt();
+      String binary="";
+      for (int i=9;i>=0;i++){
+          int c=1;
+          for (int w=0;w<=i; w++){
+              c=c*2;
+          }
+          if(a>=c){
+              a=a-c;
+              binary +="1";
+              
+          
+          }
+          else{
+            binary +="0";
+          }
+          
+      }
+      System.out.println(binary);
+          
+      }
+      
+        
+    }
