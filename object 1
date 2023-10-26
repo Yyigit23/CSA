@@ -1,0 +1,19 @@
+import javva.util.Scanner
+public class Sedat {
+    String name;
+    int age;
+    public Sedat(String a, int b){  // Sedat classı yapioz
+        name=a;
+        age=b;
+    }
+   
+    
+    public static void main(String args[]) {
+        Sedat sedat=new Sedat("Yiğit", 18);
+        Scanner scan=new Scanner(System.in);
+        String x= scan.nextLine();
+        int y=scan.nextInt();
+        Sedat yeni= new Sedat(x, y);
+    
+    }
+}
