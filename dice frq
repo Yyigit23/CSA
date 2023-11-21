@@ -1,0 +1,84 @@
+import java.util.Random;
+public class MyClass {
+    public static void main(String args[]) {
+      Random rand= new Random();
+      int i1=0;
+      int i2=0;
+      int i3=0;
+      int i4=0;
+      int i5=0;
+      int i6=0;
+      int [] list= new int[5];
+      for (int j=0; j<5; j++)
+         for (int i=0; i<20; i++){
+            int a= rand.nextInt(5)+1;
+            if (a==1){
+                i1=i1+1;
+            }
+            else if (a==2){
+                i2=i2+1;
+            }
+            else if (a==3){
+                i3=i3+1;
+            }
+            else if (a==4){
+                i4=i4+1;
+            }
+            else if (a==5){
+                i5=i5+1;
+            }
+            else if (a==6){
+                i6=i6+1;
+            }
+          
+          }
+        int max= Math.max(i1, Math.max(i2, Math.max(i3,Math.max(i4,Math.max(i5, i6)))));
+        if (max==i1){
+          list[j]=1;
+          
+          
+       }
+       else if (max==i2){
+          list[j]=2;
+          
+          
+       }
+       else if (max==i3){
+          list[j]=3;
+          
+          
+          
+       }
+       else if (max==i3){
+          list[j]=3;
+          
+          
+       }
+       else if (max==i4){
+          list[j]=4;
+          
+          
+       }
+       else if (max==i5){
+          list[j]=5;
+          
+          
+       }
+       else if (max==i6){
+          list[j]=6;
+          
+          
+       }
+       i1=0;
+       i2=0;
+       i3=0;
+       i4=0;
+       i5=0;
+       i6=0;
+       
+
+      for (int i=0; i<6; i++){
+          System.out.println(list[i]);
+      }
+    }
+}
